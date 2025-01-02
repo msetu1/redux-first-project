@@ -5,8 +5,8 @@ const App = () => {
   const dispatch = useAppDispatch();
   const { count } = useAppSelector((state) => state.counter);
 
-  const handleIncrement = () => {
-    dispatch(increment());
+  const handleIncrement = (amount) => {
+    dispatch(increment(amount));
   };
   const handleDecrement = () => {
     dispatch(decrement());
@@ -18,7 +18,7 @@ const App = () => {
         <h2 className="text-3xl font-bold mb-5">Counter with redux !</h2>
         <div className="flex items-center gap-5">
           <button
-            onClick={handleIncrement}
+            onClick={() => handleIncrement(1)}
             className="text-xl btn bg-green-500 text-white hover:bg-black"
           >
             Increment
@@ -29,6 +29,14 @@ const App = () => {
             className="text-xl btn bg-red-500 text-white hover:bg-black"
           >
             Decrement
+          </button>
+        </div>
+        <div className="flex items-center justify-center mt-10">
+          <button
+            onClick={() => handleIncrement(5)}
+            className="text-xl btn bg-rose-500 text-white hover:bg-black"
+          >
+            Increment by 5
           </button>
         </div>
       </div>
