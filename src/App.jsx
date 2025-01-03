@@ -15,7 +15,9 @@ const App = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div>
-        <h2 className="text-3xl font-bold mb-5">Counter with redux !</h2>
+        <h2 className="text-4xl text-center font-bold mb-10">
+          Counter with redux !
+        </h2>
         <div className="flex items-center gap-5">
           <button
             onClick={() => handleIncrement(1)}
